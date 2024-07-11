@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func callbackHelp() error {
+func callbackHelp(cfg *config) error {
 	fmt.Println("Available commands:")
 	// fmt.Println("help - display this message")
 	// fmt.Println("exit - exit the program")
