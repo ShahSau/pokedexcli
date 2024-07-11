@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func callbackMap(cfg *config) error {
+func callbackMap(cfg *config, args ...string) error {
 	res, err := cfg.pokeapiClient.GetLocationAreas(cfg.nextLocationAreaUrl)
 
 	if err != nil {
@@ -21,7 +21,7 @@ func callbackMap(cfg *config) error {
 	return nil
 }
 
-func callbackMapBack(cfg *config) error {
+func callbackMapBack(cfg *config, args ...string) error {
 
 	if cfg.previousLocationAreaUrl == nil {
 		fmt.Println("No previous location area")
