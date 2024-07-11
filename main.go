@@ -1,5 +1,7 @@
 package main
 
+import "time"
+
 type config struct {
 	pokeapiClient           Client
 	nextLocationAreaUrl     *string
@@ -9,7 +11,7 @@ type config struct {
 func main() {
 
 	cfg := config{
-		pokeapiClient: NewClient(),
+		pokeapiClient: NewClient(time.Hour),
 	}
 
 	startRepl(&cfg)
